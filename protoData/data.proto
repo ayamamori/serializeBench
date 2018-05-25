@@ -1,0 +1,29 @@
+syntax = "proto3";
+package protoData;
+
+message ResponseTop
+{
+    int32 Ts = 1;
+    int32 Pid = 2;
+    int32 Rev = 3;
+    Login Login = 4;
+}
+
+message Login
+{
+    UserStatus UserStatus = 1;
+    repeated UserCard UserCardList = 2;
+}
+
+message UserCard
+{
+    int32 CardId = 1;
+    int32 Level = 2;
+}
+
+message UserStatus
+{
+    int32 UserId = 1;
+    string UserName = 2;
+    int32 Exp = 3;
+}
